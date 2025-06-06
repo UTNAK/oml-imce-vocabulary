@@ -6,5 +6,6 @@ vocabulary bundle <http://opencaesar.io/template/vocabulary/bundle#> as vocabula
 	includes <http://purl.org/dc/elements/1.1/> as dc	
 
 	includes <http://opencaesar.io/template/vocabulary/vocabulary1#>
+	includes <http://opencaesar.io/template/vocabulary/mission#>
 
 }

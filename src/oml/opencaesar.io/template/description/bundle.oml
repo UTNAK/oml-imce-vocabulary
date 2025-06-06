@@ -8,5 +8,8 @@ description bundle <http://opencaesar.io/template/description/bundle#> as descri
 	uses <http://opencaesar.io/template/vocabulary/bundle#>
 	
 	includes <http://opencaesar.io/template/description/description1#>
+	includes <http://opencaesar.io/template/description/missions#>
+	includes <http://opencaesar.io/template/description/objectives#>
+
 
 }

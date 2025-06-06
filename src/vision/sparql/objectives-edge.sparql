@@ -1,0 +1,26 @@
+PREFIX base:        <http://imce.jpl.nasa.gov/foundation/base#>
+PREFIX mission:        <http://imce.jpl.nasa.gov/foundation/mission#>
+
+SELECT DISTINCT ?iri ?c1 ?c1_instancename ?c1_1d ?c1_name ?piri ?c2_instancename ?c2_1d ?c2_name 
+WHERE {
+
+  VALUES ?componentType { mission:Objective }
+
+  ?c1 a ?componentType ;
+    base:hasIdentifier ?c1_1d ;
+    base:hasCanonicalName ?c1_name ;
+
+  OPTIONAL{
+    ?c1 base:isAggregatedIn ?piri ;
+    OPTIONAL{
+      ?piri base:hasIdentifier ?c2_1d ;
+          base:hasCanonicalName ?c2_name .
+    }
+  }
+
+
+  BIND(?c1 AS ?iri) .
+  BIND(STRAFTER(STR(?c1), "#") AS ?c1_instancename) .
+  BIND(STRAFTER(STR(?piri), "#") AS ?c2_instancename) .
+ }
+ORDER BY ?c1_1d

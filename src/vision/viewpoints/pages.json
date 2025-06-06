@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Home",
+    "path": "/",
+    "type": "home"
+  },
+  {
+    "title": "Requirements",
+    "type": "group",
+    "iconUrl": "https://raw.githubusercontent.com/nasa-jpl/stellar/32694a2d2c102426ab42c97089d1cdebe10100bd/icons/checklist_on_page.svg",
+    "children": [
+      {
+        "title": "Objectives",
+        "type": "diagram",
+        "path": "objectives"
+      }
+    ]
+  },
+  {
+    "title": "Tree",
+    "type": "group",
+    "iconUrl": "https://raw.githubusercontent.com/nasa-jpl/stellar/32694a2d2c102426ab42c97089d1cdebe10100bd/icons/checklist_on_page.svg",
+    "children": [
+      {
+        "title": "Missions",
+        "type": "tree",
+        "path": "missions"
+      },
+      {
+        "title": "Connections",
+        "type": "table",
+        "path": "connections"
+      }
+    ]
+  }
+]

@@ -5,7 +5,7 @@ project:
    version: 1.0.0
 
 dependencies:
-   - io.opencaesar.ontologies:core-vocabularies:5.+
+   - io.opencaesar.ontologies:imce-vocabularies:+
 
 datasets:
    template:

@@ -10,8 +10,8 @@ This repository has a template [OML](https://github.com/opencaesar/oml) project.
 
 ## Clone
 ```
-  git clone https://github.com/opencaesar/oml-template.git
-  cd oml-template
+  git clone https://github.com/UTNAK/oml-imce-vocabulary.git
+  cd oml-imce-vocabulary
 ```
 
 ## Build
