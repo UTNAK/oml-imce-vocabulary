@@ -5,7 +5,7 @@
     "type": "home"
   },
   {
-    "title": "Requirements",
+    "title": "Objectives",
     "type": "group",
     "iconUrl": "https://raw.githubusercontent.com/nasa-jpl/stellar/32694a2d2c102426ab42c97089d1cdebe10100bd/icons/checklist_on_page.svg",
     "children": [
