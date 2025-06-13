@@ -5,14 +5,14 @@ PREFIX mission:        <http://imce.jpl.nasa.gov/foundation/mission#>
 SELECT DISTINCT ?iri ?id ?name ?type
 WHERE {
 
-  VALUES ?componentType { mission:Objective }
+  VALUES ?componentType { mission:Objective mission:Mission }
   ?iri a ?componentType ;
     base:hasIdentifier ?id ;
     base:hasCanonicalName ?name .
 
 BIND(
     IF(CONTAINS(STR(?iri), "missions#"), "Subsystem",
-      IF(CONTAINS(STR(?iri), "objectives#"), "Subsystem", "")
+      IF(CONTAINS(STR(?iri), "objectives#"), "Assembly", "")
     ) AS ?type
   )
 

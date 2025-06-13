@@ -8,10 +8,10 @@
   "rowMapping": {
     "id": "node",
     "name": "Parent",
-    "labelFormat": "{c1_1d} {c1_instancename}",
-    "nodeColor": "#006994",
+    "labelFormat": "{id} {name}",
+    "nodeColor": "Dark Blue",
     "nodeTextColor": "white",
-    "nodeType": "NA",
+    "nodeType": "{type}",
     "edgeMatchKey": "iri"
   },
   "edges": [
@@ -19,10 +19,10 @@
       "id": "edge",
       "name": "Edge",
       "animated": true,
-      "labelFormat": "Aggregates",
-      "legendItems": "piri",
+      "labelFormat": "{type}",
+      "legendItems": "{type}",
       "sourceKey": "iri",
-      "targetKey": "piri"
+      "targetKey": "childiri"
     }
   ]
 }
