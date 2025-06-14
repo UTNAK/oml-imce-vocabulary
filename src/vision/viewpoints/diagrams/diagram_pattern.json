@@ -1,9 +1,9 @@
 {
-"objectives": {
-  "name": "objectives",
+"diagram_pattern": {
+  "name": "diagram_pattern",
   "queries": {
-    "node": "objectives.sparql",
-    "edge": "objectives-edge.sparql"
+    "node": "diagram_nodes.sparql",
+    "edge": "diagram_edges.sparql"
   },
   "rowMapping": {
     "id": "node",

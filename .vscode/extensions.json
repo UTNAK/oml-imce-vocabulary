@@ -2,6 +2,7 @@
     "recommendations": [
         "vscjava.vscode-gradle",
         "opencaesar.oml-luxor",
-        "opencaesar.oml-vision"
+        "opencaesar.oml-vision",
+        "stardog-union.stardog-rdf-grammars"
     ]
 }
