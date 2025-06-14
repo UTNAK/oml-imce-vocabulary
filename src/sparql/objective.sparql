@@ -6,11 +6,13 @@ SELECT DISTINCT*# ?iri ?id ?name ?miri
 WHERE {
   ?iri a mission:Objective;
     base:hasIdentifier ?id;
-    base:hasCanonicalName ?name;
-    mission:isPursuedBy ?miri. 
-  
+    base:hasCanonicalName ?name.
   OPTIONAL{
-    ?miri base:hasIdentifier ?mid ;
-          base:hasCanonicalName ?mname ;
+    ?iri mission:isPursuedBy ?miri. 
+
+    OPTIONAL{
+      ?miri base:hasIdentifier ?mid ;
+            base:hasCanonicalName ?mname ;
+  	}
   }
 }ORDER BY ?id
