@@ -14,4 +14,19 @@ vocabulary <http://opencaesar.io/template/vocabulary/mission#> as mission {
     ]
 
 
+	concept Mission < imce-base:IdentifiedElement
+
+	relation entity Pursues [
+
+		from Mission
+        to Objective
+		forward pursues
+		reverse isPursuedBy
+	
+	]
+
+
+
+
+
 }
