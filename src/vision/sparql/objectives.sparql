@@ -1,17 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX base:        <http://imce.jpl.nasa.gov/foundation/base#>
 PREFIX mission:        <http://imce.jpl.nasa.gov/foundation/mission#>
 
-SELECT DISTINCT ?iri ?c1 ?c1_instancename ?c1_1d ?c1_name
+SELECT DISTINCT ?iri ?id ?name ?type
 WHERE {
 
   VALUES ?componentType { mission:Objective }
+  ?iri a ?componentType ;
+    base:hasIdentifier ?id ;
+    base:hasCanonicalName ?name .
 
-  ?c1 a ?componentType ;
-    base:hasIdentifier ?c1_1d ;
-    base:hasCanonicalName ?c1_name ;
+BIND(
+    IF(CONTAINS(STR(?iri), "missions#"), "missions",
+      IF(CONTAINS(STR(?iri), "objectives#"), "Subsystem", "")
+    ) AS ?type
+  )
 
-  BIND(?c1 AS ?iri) .
-  BIND(STRAFTER(STR(?c1), "#") AS ?c1_instancename) .
 
  }
-ORDER BY ?c1_1d
+ORDER BY ?id

@@ -1,15 +1,15 @@
 {
-"objectives": {
-  "name": "objectives",
+"missionsandobjectives": {
+  "name": "missionsandobjectives",
   "queries": {
-    "node": "objectives.sparql",
-    "edge": "objectives-edge.sparql"
+    "node": "missions.sparql",
+    "edge": "missions_edges.sparql"
   },
   "rowMapping": {
     "id": "node",
     "name": "Parent",
     "labelFormat": "{id} {name}",
-    "nodeColor": "Dark Blue",
+    "nodeColor": "Green",
     "nodeTextColor": "white",
     "nodeType": "{type}",
     "edgeMatchKey": "iri"
@@ -19,10 +19,10 @@
       "id": "edge",
       "name": "Edge",
       "animated": true,
-      "labelFormat": "{type}",
-      "legendItems": "{type}",
+      "labelFormat": "Pursues",
+      "legendItems": "Pursues",
       "sourceKey": "iri",
-      "targetKey": "childiri"
+      "targetKey": "oiri"
     }
   ]
 }
