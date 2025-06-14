@@ -13,5 +13,14 @@ vocabulary <http://opencaesar.io/template/vocabulary/mission#> as mission {
 		restricts all imce-base:isAggregatedIn to Objective
     ]
 
-
+	// Mission
+	concept Mission < imce-base:IdentifiedElement
+	relation entity Pursues [
+		from Mission
+		to Objective
+		forward pursues
+		reverse isPursuesdBy
+		// asymmetric
+		// irreflexive 
+	]
 }
