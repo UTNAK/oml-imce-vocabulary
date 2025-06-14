@@ -13,5 +13,6 @@ vocabulary <http://opencaesar.io/template/vocabulary/mission#> as mission {
 		restricts all imce-base:isAggregatedIn to Objective
     ]
 
+	concept Component < imce-base:ContainedElement
 
 }
