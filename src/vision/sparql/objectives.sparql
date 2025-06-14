@@ -11,7 +11,7 @@ WHERE {
     base:hasCanonicalName ?name .
 
 BIND(
-    IF(CONTAINS(STR(?iri), "missions#"), "Subsystem",
+    IF(CONTAINS(STR(?iri), "missions#"), "missions",
       IF(CONTAINS(STR(?iri), "objectives#"), "Subsystem", "")
     ) AS ?type
   )
