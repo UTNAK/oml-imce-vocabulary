@@ -1,6 +1,6 @@
 @dc:title "Example Description"
 @dc:creator "Example Company"
-@dc:rights "Copyright 2019, by Example Company"
+@dc:rights "Copyright 2019, by Example Company Muto"
 description <http://opencaesar.io/template/description/missions#> as missions {
 
 //	extends <http://opencaesar.io/template/description/components#> as components
