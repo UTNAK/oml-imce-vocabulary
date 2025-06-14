@@ -1,5 +1,5 @@
 @dc:title "Example Description"
-@dc:creator "Example Company kida yuki @sdm"
+@dc:creator "Example Company ykida @sdm"
 @dc:rights "Copyright 2019, by Example Company"
 description <http://opencaesar.io/template/description/missions#> as missions {
 
