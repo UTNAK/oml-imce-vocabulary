@@ -4,15 +4,28 @@
 vocabulary <http://opencaesar.io/template/vocabulary/mission#> as mission {
 	
 	extends <http://purl.org/dc/elements/1.1/> as dc
-	extends <http://imce.jpl.nasa.gov/foundation/mission#> as imce-mission
+	// extends <http://imce.jpl.nasa.gov/foundation/mission#> as imce-mission
     extends <http://imce.jpl.nasa.gov/foundation/base#> as imce-base
 	
 	// Objective
-	concept Objective < imce-mission:Objective[
+	concept Objective < imce-base:IdentifiedElement,imce-base:AggregatedElement[
 		restricts all imce-base:aggregates to Objective
 		restricts all imce-base:isAggregatedIn to Objective
     ]
 
-	concept Component < imce-base:ContainedElement
+
+	concept Mission < imce-base:IdentifiedElement[
+		// restricts all pursues to Objective	
+	]
+	relation entity Pursues [
+		from Mission
+		to Objective
+		forward pursues
+		reverse isPursuedBy
+		asymmetric
+		irreflexive
+	]
+
+	// concept Component < imce-base:ContainedElement
 
 }

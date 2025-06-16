@@ -10,7 +10,15 @@ description <http://opencaesar.io/template/description/missions#> as missions {
 	uses <http://purl.org/dc/elements/1.1/> as dc
 
 	uses <http://imce.jpl.nasa.gov/foundation/base#> as base
-	uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+	uses <http://imce.jpl.nasa.gov/foundation/mission#> as imce-mission
+
+	uses <http://opencaesar.io/template/vocabulary/mission#> as mission
+
+	instance m1.1 : imce-mission:Mission
+	instance m1 : imce-mission:Mission[
+		base:contains m1.1
+	]
+
 
 	instance lander : mission:Mission [
 		base:hasCanonicalName "Lander Mission"
